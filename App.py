@@ -16,7 +16,6 @@ model3 = joblib.load('XGB_mdl.pkl')
 df = pd.read_csv("fraudTest.csv")
 
 # Getting inputs from user
-
 cate = pd.DataFrame(df["category"].unique(), columns=['category'])
 cate = cate.sort_values(by=['category'])
 cate_list = [item for sublist in cate.values.tolist() for item in sublist]
